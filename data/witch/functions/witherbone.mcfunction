@@ -1,0 +1,1 @@
+give @s minecraft:bone{Enchantments:[{}],tag:witherbone,display:{Name:'[{"text":"Witherbone","italic":false}]',Lore:['[{"text":"A withered bone from a wither skeleton.","italic":false}]']}}

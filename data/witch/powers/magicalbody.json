@@ -1,0 +1,13 @@
+{
+    "name": "Magical Body",
+    "description": "Due to your magical affinity, you take much less damage from magical sources",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:in_tag",
+        "tag": "minecraft:witch_resistant_to"
+    },
+    "modifier": {
+        "operation": "multiply_total_multiplicative",
+        "value": -0.85
+    }
+}

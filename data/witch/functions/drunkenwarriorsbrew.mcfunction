@@ -1,0 +1,1 @@
+give @s minecraft:potion{CustomPotionEffects:[{Id:2,Duration:3600},{Id:5,Amplifier:3,Duration:1200},{Id:9,Duration:600},{Id:11,Duration:1200}],CustomPotionColor:13369453,display:{Name:'[{"text":"Drunken Warrior\'s Brew","italic":false,"color":"light_purple"}]',Lore:["\"A stronger version of alcohol that gives buffs!\""]}}

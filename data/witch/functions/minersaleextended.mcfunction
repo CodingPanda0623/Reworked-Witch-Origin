@@ -1,0 +1,1 @@
+give @s minecraft:potion{CustomPotionEffects:[{Id:3,Duration:9600}],CustomPotionColor:12945666,tag:minersaleextended,display:{Name:'[{"text":"Miner\'s Ale","italic":false,"color":"gold"}]',Lore:['[{"text":"A drink used frequently by miners to increase their mining speed!","italic":false}]']}}

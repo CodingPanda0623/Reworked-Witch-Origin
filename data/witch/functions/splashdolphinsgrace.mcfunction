@@ -1,0 +1,1 @@
+give @s minecraft:splash_potion{CustomPotionEffects:[{Id:30,Duration:600}],CustomPotionColor:379391,tag:splashdolphinsgrace,display:{Name:'[{"text":"Splash Potion of Dolphin\'s Grace","italic":false,"color":"aqua"}]'}}

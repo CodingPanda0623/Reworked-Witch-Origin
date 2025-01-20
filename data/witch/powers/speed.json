@@ -1,0 +1,13 @@
+{
+    "name": "Pillaging Raider",
+    "description": "While in raids, you gain a speed boost.",
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.movement_speed",
+        "operation": "multiply_base",
+        "value": 0.4
+    },
+    "condition": {
+        "type": "moborigins:in_raid_area"
+    }
+}

@@ -1,0 +1,1 @@
+give @p minecraft:splash_potion{CustomPotionEffects:[{Id:20,Amplifier:1,Duration:900}],CustomPotionColor:3158064,tag:splashwitheringamplified,display:{Name:'[{"text":"Splash Potion of Withering II","italic":false}]'}}

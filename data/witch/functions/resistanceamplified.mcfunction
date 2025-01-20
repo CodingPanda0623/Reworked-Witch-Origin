@@ -1,0 +1,1 @@
+give @s minecraft:potion{CustomPotionEffects:[{Id:11,Amplifier:1,Duration:300}],CustomPotionColor:9860005,tag:resistanceamplified,display:{Name:'[{"text":"Potion of Resistance","italic":false,"color":"dark_gray"}]'}}

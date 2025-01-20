@@ -1,0 +1,1 @@
+give @s minecraft:lingering_potion{CustomPotionEffects:[{Id:30,Duration:150}],CustomPotionColor:379391,display:{Name:'[{"text":"Lingering Potion of Dolphin\'s Grace","italic":false,"color":"aqua"}]'}}

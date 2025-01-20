@@ -1,0 +1,1 @@
+give @s minecraft:splash_potion{CustomPotionEffects:[{Id:29,Duration:3600}],CustomPotionColor:171417,tag:splashconduitpower,display:{Name:'[{"text":"Splash Potion of Conduit Power","italic":false,"color":"dark_aqua"}]'}}

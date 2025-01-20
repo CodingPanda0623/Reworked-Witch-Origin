@@ -1,0 +1,1 @@
+give @s minecraft:potion{CustomPotionColor:16773037,tag:levitationessence,display:{Name:'[{"text":"Essence of Levitation","italic":false,"color":"dark_purple"}]',Lore:['[{"text":"The essence of levitation, derived from a shulker bullet.","italic":false}]']}}

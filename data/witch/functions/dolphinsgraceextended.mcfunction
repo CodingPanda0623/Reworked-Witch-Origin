@@ -1,0 +1,1 @@
+give @s minecraft:potion{CustomPotionEffects:[{Id:30,Duration:1200}],CustomPotionColor:379391,tag:dolphinsgraceextended,display:{Name:'[{"text":"Potion of Dolphin\'s Grace","italic":false,"color":"aqua"}]'}}

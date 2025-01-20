@@ -1,0 +1,1 @@
+give @s minecraft:potion{CustomPotionEffects:[{Id:7,Amplifier:2,Duration:-1}],CustomPotionColor:4393481,tag:harming3,display:{Name:'[{"text":"Enhanced Potion of Harming","italic":false,"color":"dark_red"}]'}}

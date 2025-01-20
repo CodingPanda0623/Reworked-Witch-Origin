@@ -1,0 +1,1 @@
+give @s minecraft:ink_sac{Enchantments:[{}],tag:enhancedinksac,display:{Name:'[{"text":"Enhanced Ink Sac","italic":false,"color":"black"}]',Lore:['[{"text":"An ink sac enhanced with an echo shard.","italic":false}]']}}

@@ -1,0 +1,1 @@
+give @s minecraft:potion{CustomPotionEffects:[{Id:24,Duration:900}],CustomPotionColor:16776376,tag:glowing,display:{Name:'[{"text":"Potion of Glowing","italic":false,"color":"white"}]'}}

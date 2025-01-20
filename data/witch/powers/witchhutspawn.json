@@ -1,0 +1,8 @@
+{
+    "type": "origins:modify_player_spawn",
+    "name": "Witch Hut Spawn",
+    "description": "You spawn at a witch hut.",
+    "dimension": "minecraft:overworld",
+    "structure": "minecraft:swamp_hut",
+    "spawn_strategy": "center"
+}

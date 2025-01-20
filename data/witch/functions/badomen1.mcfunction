@@ -1,0 +1,1 @@
+give @s minecraft:potion{CustomPotionEffects:[{Id:31,Duration:120000}],CustomPotionColor:280320,tag:badomen1,display:{Name:'[{"text":"Potion of Bad Omen","italic":false,"color":"dark_green"}]'}}

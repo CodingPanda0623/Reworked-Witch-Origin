@@ -1,0 +1,1216 @@
+{
+    "name": "Illager Trading",
+    "description": "As an illager-aligned origin, you can trade with illagers, provided you didn't hit them. Be careful! Trading with them while they're angry will waste your emeralds and give you nothing. They're still passive to you, though and they don't drop their usual drops if you kill them.",
+    "type": "origins:multiple",
+    "trade_evoker": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 64
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:evoker"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:totem_of_undying"
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 64
+        }
+    },
+    "trade_vindicator": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">=",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:vindicator"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:iron_axe"
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 2
+        }
+    },
+    "trade_pillager1": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:pillager"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:crossbow"
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 2
+        }
+    },
+    "trade_pillager2": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 4
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:pillager"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "function witch:ominousbanner"
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 4
+        }
+    },
+    "trade_pillager3": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">=",
+                    "compare_to": 32
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:pillager"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "give @s minecraft:goat_horn{instrument:\"minecraft:seek_goat_horn\"}"
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 32
+        }
+    },
+    "trade_witch1": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">=",
+                    "compare_to": 20
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:rabbit_foot"
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 20
+        }
+    },
+    "trade_witch2": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:glowstone_dust",
+                    "amount": 2
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        }
+    },
+    "trade_witch3": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:redstone",
+                    "amount": 4
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 2
+        }
+    },
+    "trade_witch4": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 5
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:spider_eye"
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 5
+        }
+    },
+    "trade_witch5": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 10
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:glistering_melon_slice"
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 10
+        }
+    },
+    "trade_witch6": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:glass_bottle",
+                    "amount": 9
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 3
+        }
+    },
+    "trade_evoker_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">=",
+                    "compare_to": 32
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:evoker"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:totem_of_undying"
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 32
+        }
+    },
+    "trade_vindicator_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:vindicator"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:iron_axe"
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        }
+    },
+    "trade_pillager1_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:pillager"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:crossbow"
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        }
+    },
+    "trade_pillager2_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:pillager"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "function witch:ominousbanner"
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 2
+        }
+    },
+    "trade_pillager3_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">=",
+                    "compare_to": 16
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:pillager"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "give @s minecraft:goat_horn{instrument:\"minecraft:seek_goat_horn\"}"
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 16
+        }
+    },
+    "trade_witch1_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">=",
+                    "compare_to": 20
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:rabbit_foot",
+                    "amount": 2
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 20
+        }
+    },
+    "trade_witch2_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:glowstone_dust",
+                    "amount": 4
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        }
+    },
+    "trade_witch3_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:redstone",
+                    "amount": 8
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 2
+        }
+    },
+    "trade_witch4_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 5
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:spider_eye",
+                    "amount": 2
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 5
+        }
+    },
+    "trade_witch5_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 10
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:glistering_melon_slice",
+                    "amount": 2
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 10
+        }
+    },
+    "trade_witch6_reduced": {
+        "type": "origins:action_on_entity_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "witch:hero_of_the_raiders_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:emerald"
+                    }
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:witch"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['angry']}"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:glass_bottle",
+                    "amount": 18
+                }
+            }
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 3
+        }
+    }
+}

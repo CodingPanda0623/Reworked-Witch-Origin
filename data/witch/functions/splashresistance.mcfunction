@@ -1,0 +1,1 @@
+give @s minecraft:splash_potion{CustomPotionEffects:[{Id:11,Duration:600}],CustomPotionColor:9860005,tag:splashresistance,display:{Name:'[{"text":"Splash Potion of Resistance","italic":false,"color":"dark_gray"}]'}}

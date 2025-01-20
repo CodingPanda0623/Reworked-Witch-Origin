@@ -1,0 +1,40 @@
+{
+    "name": "Call Raid",
+    "description": "While holding an ominous banner in your offhand and a certain type of goat horn in your mainhand, you are able to give yourself bad omen 5.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:nbt",
+                        "nbt": "{instrument:\"minecraft:seek_goat_horn\"}"
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:nbt",
+                        "nbt": "{BlockEntityTag:{Patterns:[{Pattern:\"mr\",Color:9},{Pattern:\"bs\",Color:8},{Pattern:\"cs\",Color:7},{Pattern:\"bo\",Color:8},{Pattern:\"ms\",Color:15},{Pattern:\"hh\",Color:8},{Pattern:\"mc\",Color:8},{Pattern:\"bo\",Color:15}]}}"
+                    }
+                }
+            ]
+        },
+        "if_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:bad_omen",
+                "duration": 120000,
+                "amplifier": 4
+            }
+        }
+    },
+    "key": {
+        "key": "key.use"
+    }
+}

@@ -1,0 +1,1 @@
+give @s minecraft:lingering_potion{CustomPotionEffects:[{Id:7,Amplifier:2,Duration:100}],CustomPotionColor:4393481,display:{Name:'[{"text":"Enhanced Lingering Potion of Harming","italic":false,"color":"dark_red"}]'}}

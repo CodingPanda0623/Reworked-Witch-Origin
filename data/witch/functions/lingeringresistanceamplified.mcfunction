@@ -1,0 +1,1 @@
+give @s minecraft:lingering_potion{CustomPotionEffects:[{Id:11,Amplifier:1,Duration:80}],CustomPotionColor:9860005,display:{Name:'[{"text":"Lingering Potion of Resistance","italic":false,"color":"dark_gray"}]'}}

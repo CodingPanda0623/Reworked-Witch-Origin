@@ -1,0 +1,1 @@
+give @s minecraft:nautilus_shell{Enchantments:[{}],tag:dolphinsblessing,display:{Name:'[{"text":"Dolphin\'s Blessing","italic":false,"color":"aqua"}]',Lore:['[{"text":"A nautilus shell with the blessing of a dolphin.","italic":false}]']}}

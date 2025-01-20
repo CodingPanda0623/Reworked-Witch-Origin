@@ -1,0 +1,1 @@
+give @s minecraft:splash_potion{CustomPotionEffects:[{Id:9,Duration:60},{Id:15,Duration:60},{Id:33,Duration:60}],CustomPotionColor:1114148,tag:flashbang,display:{Name:'[{"text":"Flask of Flashbang","italic":false,"color":"black"}]'}}

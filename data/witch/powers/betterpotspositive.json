@@ -1,0 +1,26 @@
+{
+    "name": "Potion Mastery",
+    "description": "Positive status effects have their duration doubled for you.",
+    "type": "origins:modify_status_effect_duration",
+    "status_effects": [
+        "minecraft:haste",
+        "minecraft:strength",
+        "minecraft:speed",
+        "minecraft:regeneration",
+        "minecraft:resistance",
+        "minecraft:fire_resistance",
+        "minecraft:water_breathing",
+        "minecraft:night_vision",
+        "minecraft:health_boost",
+        "minecraft:absorption",
+        "minecraft:saturation",
+        "minecraft:luck",
+        "minecraft:conduit_power",
+        "minecraft:dolphins_grace",
+        "minecraft:invisibility"
+    ],
+    "modifier": {
+        "operation": "multiply_total_multiplicative",
+        "value": 1
+    }
+}

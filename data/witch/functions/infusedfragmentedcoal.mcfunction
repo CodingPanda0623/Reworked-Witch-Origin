@@ -1,0 +1,1 @@
+give @s minecraft:coal{Enchantments:[{}],tag:infusedfragmentedcoal,display:{Name:'[{"text":"Infused Fragmented Coal","italic":false,"color":"red"}]',Lore:['[{"text":"Fragments of coal, infused with a fire charge.","italic":false}]']}}

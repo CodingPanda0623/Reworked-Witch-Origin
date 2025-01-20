@@ -1,0 +1,1 @@
+give @s minecraft:splash_potion{CustomPotionEffects:[{Id:25,Amplifier:5,Duration:60}],CustomPotionColor:16773037,display:{Name:'[{"text":"Spark of Levitation","italic":false,"color":"dark_purple"}]'}}

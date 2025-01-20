@@ -1,0 +1,114 @@
+{
+    "name": "Beneficial potion",
+    "description": "You can use potions to benefit yourself based on the situation every 30 seconds. Fire resistance if on fire, water breathing in water, slow falling if falling, instant health when damaged, speed otherwise",
+    "type": "origins:active_self",
+    "cooldown": 600,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 23
+    },
+    "entity_action": {
+        "type": "origins:if_else_list",
+        "actions": [
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:fluid_height",
+                            "fluid": "minecraft:water",
+                            "comparison": ">",
+                            "compare_to": 1.56
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:status_effect",
+                            "effect": "minecraft:water_breathing"
+                        }
+                    ]
+                },
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:water_breathing",
+                        "duration": 3600
+                    }
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:on_fire"
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:status_effect",
+                            "effect": "minecraft:fire_resistance"
+                        }
+                    ]
+                },
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:fire_resistance",
+                        "duration": 3600
+                    }
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "inverted": true,
+                            "type": "origins:on_block"
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:status_effect",
+                            "effect": "minecraft:slow_falling"
+                        }
+                    ]
+                },
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:slow_falling",
+                        "duration": 3600
+                    }
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:health",
+                    "comparison": "<",
+                    "compare_to": 20
+                },
+                "action": {
+                    "type": "origins:heal",
+                    "amount": 8
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 20
+                },
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:speed",
+                        "duration": 3600
+                    }
+                }
+            }
+        ]
+    },
+    "key": {
+        "key": "key.origins.primary_active"
+    }
+}

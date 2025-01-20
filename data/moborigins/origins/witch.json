@@ -1,0 +1,33 @@
+{
+    "name": "Witch",
+    "powers": [
+        "moborigins:witch_particles",
+        "moborigins:pillager_aligned",
+        "moborigins:illager",
+        "witch:witchhutspawn",
+        "witch:betterpotspositive",
+        "witch:witcharsenal",
+        "witch:potionthrow",
+        "witch:speed",
+        "witch:throwpotsfurther",
+        "witch:magicalbody",
+        "witch:portable_brewing",
+        "witch:selfpot",
+        "witch:collectshulkerbullets",
+        "witch:illagertrading",
+        "witch:collectresonanceessence",
+        "witch:callraid",
+        "witch:hero_of_the_raiders",
+        "witch:collectdolphinsblessing",
+        "witch:collectwitherbone",
+        "witch:reduceddamage",
+        "witch:startinggear",
+        "witch:witchyhealth",
+        "witch:passive_no_drops",
+        "witch:witchnoises"
+    ],
+    "icon": "minecraft:brewing_stand",
+    "order": 4,
+    "impact": 2,
+    "loading_priority": 1
+}

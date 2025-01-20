@@ -1,0 +1,292 @@
+{
+    "name": "Hero of the Raiders",
+    "description": "After winning a raid, you get a hero effect that halves all costs of trades with illagers, and doubles the amount traded by witches. Nearby illagers will give you gifts.",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2400,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 24,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_resource",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
+    },
+    "deplete_over_time": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_resource",
+            "change": -1
+        }
+    },
+    "completed_raid": {
+        "type": "origins:action_over_time",
+        "interval": 80,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "moborigins:in_raid_area"
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[type=villager,distance=..192]",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_resource",
+                    "change": 2400,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.witch.celebrate"
+                }
+            ]
+        }
+    },
+    "illager_gifts": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 5,
+                    "bientity_condition": {
+                        "type": "origins:target_condition",
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:or",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:entity_type",
+                                            "entity_type": "minecraft:witch"
+                                        },
+                                        {
+                                            "type": "origins:entity_group",
+                                            "group": "illager"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "inverted": true,
+                                    "type": "origins:nbt",
+                                    "nbt": "{Tags: ['gifted']}"
+                                }
+                            ]
+                        }
+                    },
+                    "bientity_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:actor_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "tag @s add reciever"
+                                }
+                            },
+                            {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "tp @s ~ ~ ~ facing entity @p[tag=reciever]"
+                                        },
+                                        {
+                                            "type": "origins:if_else_list",
+                                            "actions": [
+                                                {
+                                                    "condition": {
+                                                        "type": "origins:entity_type",
+                                                        "entity_type": "minecraft:witch"
+                                                    },
+                                                    "action": {
+                                                        "type": "origins:choice",
+                                                        "actions": [
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"glass_bottle\",Count:3b},Tags:['gift']}"
+                                                                },
+                                                                "weight": 2
+                                                            },
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"glowstone_dust\",Count:3b},Tags:['gift']}"
+                                                                },
+                                                                "weight": 2
+                                                            },
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"redstone\",Count:7b},Tags:['gift']}"
+                                                                },
+                                                                "weight": 2
+                                                            },
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"sugar\",Count:3b},Tags:['gift']}"
+                                                                },
+                                                                "weight": 2
+                                                            },
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"spider_eye\",Count:3b},Tags:['gift']}"
+                                                                },
+                                                                "weight": 2
+                                                            },
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"gunpowder\",Count:3b},Tags:['gift']}"
+                                                                },
+                                                                "weight": 2
+                                                            },
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"stick\",Count:3b},Tags:['gift']}"
+                                                                },
+                                                                "weight": 2
+                                                            },
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"potion\",Count:1b,tag:{Potion:\"minecraft:healing\"}},Tags:['gift']}"
+                                                                },
+                                                                "weight": 1
+                                                            },
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"potion\",Count:1b,tag:{Potion:\"minecraft:fire_resistance\"}},Tags:['gift']}"
+                                                                },
+                                                                "weight": 1
+                                                            },
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"potion\",Count:1b,tag:{Potion:\"minecraft:water_breathing\"}},Tags:['gift']}"
+                                                                },
+                                                                "weight": 1
+                                                            },
+                                                            {
+                                                                "element": {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"potion\",Count:1b,tag:{Potion:\"minecraft:swiftness\"}},Tags:['gift']}"
+                                                                },
+                                                                "weight": 1
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "condition": {
+                                                        "type": "origins:entity_type",
+                                                        "entity_type": "minecraft:pillager"
+                                                    },
+                                                    "action": {
+                                                        "type": "origins:execute_command",
+                                                        "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"crossbow\",Count:1b},Tags:['gift']}"
+                                                    }
+                                                },
+                                                {
+                                                    "condition": {
+                                                        "type": "origins:entity_type",
+                                                        "entity_type": "minecraft:vindicator"
+                                                    },
+                                                    "action": {
+                                                        "type": "origins:execute_command",
+                                                        "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"iron_axe\",Count:1b},Tags:['gift']}"
+                                                    }
+                                                },
+                                                {
+                                                    "condition": {
+                                                        "type": "origins:entity_type",
+                                                        "entity_type": "minecraft:evoker"
+                                                    },
+                                                    "action": {
+                                                        "type": "origins:execute_command",
+                                                        "command": "summon minecraft:item ~ ~1 ~ {Item:{id:\"totem_of_undying\",Count:1b},Tags:['gift']}"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "tp @e[tag=gift,limit=1,sort=nearest] ~ ~1 ~ facing entity @p[tag=reciever]"
+                                        },
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "tag @s add gifted"
+                                        },
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "power grant @s witch:gifted"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "origins:actor_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "tag @s remove reciever"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 5,
+                    "bientity_condition": {
+                        "type": "origins:target_condition",
+                        "condition": {
+                            "type": "origins:nbt",
+                            "nbt": "{Tags: ['gift']}"
+                        }
+                    },
+                    "bientity_action": {
+                        "type": "origins:add_velocity",
+                        "z": -1
+                    }
+                }
+            ]
+        }
+    }
+}

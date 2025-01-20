@@ -1,0 +1,1 @@
+give @s minecraft:glow_ink_sac{Enchantments:[{}],tag:enhancedglowinksac,display:{Name:'[{"text":"Enhanced Glow Ink Sac","italic":false,"color":"blue"}]',Lore:['[{"text":"An ink sac obtained from glow squids,","italic":false}]','[{"text":"enhanced with glowstone dust.","italic":false}]']}}

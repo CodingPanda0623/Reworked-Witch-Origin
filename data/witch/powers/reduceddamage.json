@@ -1,0 +1,9 @@
+{
+    "name": "Magic Combatant",
+    "description": "Your body is not conditioned to handle hand-to-hand combat. Keep your distance from strong melee opponents!",
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "multiply_base_multiplicative",
+        "value": -0.15
+    }
+}

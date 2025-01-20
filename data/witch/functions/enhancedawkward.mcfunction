@@ -1,0 +1,1 @@
+give @p minecraft:potion{CustomPotionColor:12623314,tag:enhancedawkward,display:{Name:'[{"text":"Enhanced Awkward Potion","italic":false,"color":"dark_purple"}]',Lore:['[{"text":"A potion brewed with the knowledge of elite witches.","italic":false}]']}}

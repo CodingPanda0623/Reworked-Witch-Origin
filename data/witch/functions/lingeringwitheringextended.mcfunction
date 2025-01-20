@@ -1,0 +1,1 @@
+give @p minecraft:lingering_potion{CustomPotionEffects:[{Id:20,Duration:900}],CustomPotionColor:3158064,tag:lingeringwitheringextended,display:{Name:'[{"text":"Lingering Potion of Withering","italic":false}]'}}

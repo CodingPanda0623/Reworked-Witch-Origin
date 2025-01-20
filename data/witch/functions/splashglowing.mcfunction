@@ -1,0 +1,1 @@
+give @s minecraft:splash_potion{CustomPotionEffects:[{Id:24,Duration:900}],CustomPotionColor:16776376,display:{Name:'[{"text":"Splash Potion of Glowing","italic":false,"color":"white"}]'}}

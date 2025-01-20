@@ -1,0 +1,1 @@
+give @s minecraft:potion{CustomPotionEffects:[{Id:29,Duration:9600}],CustomPotionColor:171417,tag:conduitpowerextended,display:{Name:'[{"text":"Potion of Conduit Power","italic":false,"color":"dark_aqua"}]'}}

@@ -1,0 +1,1 @@
+give @s minecraft:glistering_melon_slice{Enchantments:[{}],tag:fermentedglisteringmelon,display:{Name:'[{"text":"Fermented Glistering Melon Slice","italic":false,"color":"yellow"}]',Lore:['[{"text":"A glistering melon slice, fermented through the use of sugar.","italic":false}]']}}

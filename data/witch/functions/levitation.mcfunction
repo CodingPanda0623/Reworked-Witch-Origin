@@ -1,0 +1,2 @@
+give @s minecraft:glass_bottle 1
+give @s minecraft:potion{CustomPotionEffects:[{Id:25,Amplifier:5,Duration:60}],CustomPotionColor:16773037,tag:levitation,display:{Name:'[{"text":"Potion of Levitation","italic":false,"color":"dark_purple"}]'}}

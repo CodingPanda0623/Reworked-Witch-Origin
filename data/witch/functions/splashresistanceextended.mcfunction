@@ -1,0 +1,1 @@
+give @s minecraft:lingering_potion{CustomPotionEffects:[{Id:11,Duration:1600}],CustomPotionColor:9860005,tag:splashresistanceextended,display:{Name:'[{"text":"Splash Potion of Resistance","italic":false,"color":"dark_gray"}]'}}

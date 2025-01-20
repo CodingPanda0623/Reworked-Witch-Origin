@@ -1,0 +1,1 @@
+give @s minecraft:splash_potion{CustomPotionEffects:[{Id:7,Amplifier:2,Duration:-1}],CustomPotionColor:4393481,tag:splashharming3,display:{Name:'[{"text":"Enhanced Splash Potion of Harming","italic":false,"color":"dark_red"}]'}}
