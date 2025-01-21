@@ -2,6 +2,10 @@
     "name": "Hero of the Raiders",
     "description": "After winning a raid, you get a hero effect that halves all costs of trades with illagers, and doubles the amount traded by witches. Nearby illagers will give you gifts.",
     "type": "origins:multiple",
+    "no_hero_of_the_village": {
+        "type": "origins:effect_immunity",
+        "effect": "minecraft:hero_of_the_village"
+    },
     "resource": {
         "type": "origins:resource",
         "min": 0,
