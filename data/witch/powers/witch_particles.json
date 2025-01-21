@@ -1,11 +1,8 @@
 {
+    "type": "origins:particle",
     "hidden": true,
-    "type": "origins:action_over_time",
-    "interval": 400,
-    "entity_action": {
-        "type": "origins:play_sound",
-        "sound": "entity.witch.ambient"
-    },
+    "particle": "minecraft:witch",
+    "frequency": 4,
     "condition": {
         "type": "origins:and",
         "conditions": [
