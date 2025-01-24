@@ -8,6 +8,7 @@
         "entity_action": {
             "type": "origins:if_else",
             "condition": {
+                "inverted": true,
                 "type": "origins:power_active",
                 "power": "*:*_bad_pots_toggle"
             },
